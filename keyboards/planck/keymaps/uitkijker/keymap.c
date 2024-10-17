@@ -75,7 +75,7 @@ XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , ___
   [_NO] = LAYOUT_planck_grid(
 KC_1     , KC_2     , KC_3     , KC_4     , KC_5     , XXXXXXX  , XXXXXXX  , KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,
 XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_MINS  , KC_EQL   , KC_LBRC  , KC_RBRC  ,
-GRV_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_SCLN  , KC_SLSH  , BSL_RSF  ,
+GRV_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_QUOT  , KC_SLSH  , BSL_RSF  ,
 XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
