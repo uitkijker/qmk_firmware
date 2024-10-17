@@ -16,12 +16,45 @@
 
 #pragma once
 
-// To let tap-holds and one-shots have no relevant timeout
-#define TAPPING_TERM 10000
-
-// Send tapping keypress on upstroke after tapping term has expired without another keypress
-#define RETRO_TAPPING
-
-// Set the maximum power in mA over USB for the device (default: 500)
+// MOBILE COMPATILITY
+// Lower power draw than the default of 500 mA to reduce smart device
+// anxiety about the keyboard's hunger
 #define USB_MAX_POWER_CONSUMPTION 100
 
+/* CUSTOM HOLD-TAP
+ *
+ * I can be a lazy typer and want my slow Z's to still be Z's. Also, I do not
+ * like misfires or timeouts. There's two ways to fix this:
+ *   1.  Allowing only permissive holds during practically infinite tapping
+ *       terms;
+ *   2.  With retro tapping sending tap actions on key up when no other keys
+ *       were pressed but the tapping term had expired.
+ */
+
+// PERMISSIVE HOLD
+#define TAPPING_TERM 60000
+#define PERMISSIVE_HOLD
+
+// #define TAPPING_TERM 200
+// #define RETRO_TAPPING
+
+/* QMK DOCUMENTATION ON TAP HOLD
+ * https://docs.qmk.fm/tap_hold
+ *
+ * TAPPING TERM
+ * This determines what is a tap [during] and what is a hold [after]. This setting is defined in
+ * milliseconds and defaults to 200ms.
+ *
+ * PERMISSIVE HOLD
+ * [By default] if you press a dual-role key, tap another key (press and
+ * release) and then release the dual-role key, all within the tapping term,
+ * the dual-role key will perform its tap action. If the PERMISSIVE_HOLD option
+ * is enabled, the dual-role key will perform its hold action instead.
+ *
+ * RETRO TAPPING
+ * [By default] holding and releasing a dual-function key without pressing
+ * another key will result in nothing happening. With RETRO_TAPPING enabled,
+ * releasing the key without pressing another will send the original keycode
+ * even if it is outside the tapping term.
+ *
+ */
