@@ -21,7 +21,7 @@ enum planck_layers {
   _DVORAK,
   _QWERTY,
   _NO,
-  _FN,
+  _FN
 };
 
 #define QWERTY  DF(_QWERTY)
@@ -77,5 +77,4 @@ GRV_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXX
 XXXXXXX  , XXXXXXX  , _______  , QWERTY   , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
-}
-
+};
