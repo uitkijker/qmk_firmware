@@ -24,28 +24,29 @@ enum planck_layers {
   _FN
 };
 
-#define QWERTY  DF(_QWERTY)
-#define DVORAK  DF(_DVORAK)
+#define Z_LSFT  LSFT_T(KC_Z)
+#define SLS_RSF RSFT_T(KC_SLSH)
 #define TAB_GUI LGUI_T(KC_TAB)
 #define SPC_FN  LT(_FN,KC_SPC)
 #define ESC_CTL LCTL_T(KC_ESC)
 #define ENT_ALT LALT_T(KC_ENT)
 #define BSP_NO  LT(_NO,KC_BSPC)
 #define DEL_GUI LGUI_T(KC_DEL)
-#define Z_LSFT  LSFT_T(KC_Z)
-#define Z_RSFT  RSFT_T(KC_Z)
 #define SCL_LSF LSFT_T(KC_SCLN)
-#define GRV_LSF LSFT_T(KC_GRV)
-#define SLS_RSF RSFT_T(KC_SLSH)
-#define BSL_RSF RSFT_T(KC_BSLS)
+#define Z_RSFT  RSFT_T(KC_Z)
 #define MSSCTRL RCTL(KC_UP)
 #define LNCHPAD HYPR(KC_F4)
-#define F1_LSFT LSFT_T(KC_F1)
-#define F10_RSF RSFT_T(KC_F10)
 #define MENUBAR LCTL(KC_F2)
 #define DOCK    LCTL(KC_F3)
 #define CTLCNTR LCTL(KC_F8)
 #define NOTCNTR LCTL(KC_F11)
+#define SPTLGHT LGUI(KC_SPC)
+#define DVORAK  DF(_DVORAK)
+#define F1_LSFT LSFT_T(KC_F1)
+#define CTLCLCK LCTL(KC_BTN1)
+#define QWERTY  DF(_QWERTY)
+#define F8_RSFT RSFT_T(KC_F8)
+#define RBR_RSF RSFT_T(KC_RBRC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -65,16 +66,16 @@ XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_CTL  , XXXXXXX  , XXXXXXX  , ENT
 
   [_FN] = LAYOUT_planck_grid(
 KC_BRID  , KC_BRIU  , MSSCTRL  , LNCHPAD  , KC_EJCT  , XXXXXXX  , XXXXXXX  , KC_MRWD  , KC_MPLY  , KC_MFFD  , KC_VOLD  , KC_VOLU  ,
-KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  , KC_F11   , XXXXXXX  , XXXXXXX  , KC_F12   , MENUBAR  , DOCK     , CTLCNTR  , NOTCNTR  ,
-F1_LSFT  , KC_F2    , KC_F3    , KC_F4    , KC_F5    , XXXXXXX  , XXXXXXX  , KC_F6    , KC_F7    , KC_F8    , KC_F9    , F10_RSF  ,
-XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , DVORAK   , _______  , XXXXXXX  , XXXXXXX
+MENUBAR  , DOCK     , CTLCNTR  , NOTCNTR  , SPTLGHT  , XXXXXXX  , XXXXXXX  , DVORAK   , KC_F9    , KC_F10   , KC_F11   , KC_F12   ,
+F1_LSFT  , KC_F2    , KC_F3    , KC_F4    , CTLCLCK  , XXXXXXX  , XXXXXXX  , QWERTY   , KC_F5    , KC_F6    , KC_F7    , F8_RSFT  ,
+XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
   [_NO] = LAYOUT_planck_grid(
 KC_1     , KC_2     , KC_3     , KC_4     , KC_5     , XXXXXXX  , XXXXXXX  , KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,
-XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_MINS  , KC_EQL   , KC_LBRC  , KC_RBRC  ,
-GRV_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_SCLN  , KC_SLSH  , BSL_RSF  ,
-XXXXXXX  , XXXXXXX  , _______  , QWERTY   , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
+KC_GRV   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_SLSH  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  ,
+SCL_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_BSLS  , KC_MINS  , KC_EQL   , KC_LBRC  , RBR_RSF  ,
+XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
 };
