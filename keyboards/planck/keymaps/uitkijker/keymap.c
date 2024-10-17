@@ -28,8 +28,8 @@ enum planck_layers {
 #define SLS_RSF RSFT_T(KC_SLSH)
 #define TAB_GUI LGUI_T(KC_TAB)
 #define SPC_FN  LT(_FN,KC_SPC)
-#define ESC_CTL LCTL_T(KC_ESC)
-#define ENT_ALT LALT_T(KC_ENT)
+#define ESC_ALT LALT_T(KC_ESC)
+#define ENT_CTL LCTL_T(KC_ENT)
 #define BSP_NO  LT(_NO,KC_BSPC)
 #define DEL_GUI LGUI_T(KC_DEL)
 #define SCL_LSF LSFT_T(KC_SCLN)
@@ -54,14 +54,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 KC_Q     , KC_W     , KC_E     , KC_R     , KC_T     , XXXXXXX  , XXXXXXX  , KC_Y     , KC_U     , KC_I     , KC_O     , KC_P     ,
 KC_A     , KC_S     , KC_D     , KC_F     , KC_G     , XXXXXXX  , XXXXXXX  , KC_H     , KC_J     , KC_K     , KC_L     , KC_SCLN  ,
 Z_LSFT   , KC_X     , KC_C     , KC_V     , KC_B     , XXXXXXX  , XXXXXXX  , KC_N     , KC_M     , KC_COMM  , KC_DOT   , SLS_RSF  ,
-XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_CTL  , XXXXXXX  , XXXXXXX  , ENT_ALT  , BSP_NO   , DEL_GUI  , XXXXXXX  , XXXXXXX
+XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_ALT  , XXXXXXX  , XXXXXXX  , ENT_CTL  , BSP_NO   , DEL_GUI  , XXXXXXX  , XXXXXXX
   ),
 
   [_DVORAK] = LAYOUT_planck_grid(
 KC_QUOT  , KC_COMM  , KC_DOT   , KC_P     , KC_Y     , XXXXXXX  , XXXXXXX  , KC_F     , KC_G     , KC_C     , KC_R     , KC_M     ,
 KC_A     , KC_O     , KC_E     , KC_I     , KC_U     , XXXXXXX  , XXXXXXX  , KC_D     , KC_H     , KC_T     , KC_N     , KC_S     ,
 SCL_LSF  , KC_Q     , KC_J     , KC_K     , KC_X     , XXXXXXX  , XXXXXXX  , KC_B     , KC_L     , KC_W     , KC_V     , Z_RSFT   ,
-XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_CTL  , XXXXXXX  , XXXXXXX  , ENT_ALT  , BSP_NO   , DEL_GUI  , XXXXXXX  , XXXXXXX
+XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_ALT  , XXXXXXX  , XXXXXXX  , ENT_CTL  , BSP_NO   , DEL_GUI  , XXXXXXX  , XXXXXXX
   ),
 
   [_FN] = LAYOUT_planck_grid(
