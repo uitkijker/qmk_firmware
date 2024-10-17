@@ -15,28 +15,12 @@
  */
 
 #pragma once
-
-// MOBILE COMPATILITY
-// Lower power draw than the default of 500 mA to reduce smart device
-// anxiety about the keyboard's hunger
 #define USB_MAX_POWER_CONSUMPTION 100
-
-/* CUSTOM HOLD-TAP
- *
- * I can be a lazy typer and want my slow Z's to still be Z's. Also, I do not
- * like misfires or timeouts. There's two ways to fix this:
- *   1.  Allowing only permissive holds during practically infinite tapping
- *       terms;
- *   2.  With retro tapping sending tap actions on key up when no other keys
- *       were pressed but the tapping term had expired.
- */
+#define TAPPING_TERM 200
 
 // PERMISSIVE HOLD
-#define TAPPING_TERM 60000
-#define PERMISSIVE_HOLD
-
-// #define TAPPING_TERM 200
-// #define RETRO_TAPPING
+// #define TAPPING_TERM 60000
+// #define PERMISSIVE_HOLD
 
 /* QMK DOCUMENTATION ON TAP HOLD
  * https://docs.qmk.fm/tap_hold

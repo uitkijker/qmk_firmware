@@ -18,8 +18,8 @@
 
 // Define layer names for clarity
 enum planck_layers {
-  _DVORAK,
   _QWERTY,
+  _DVORAK,
   _NO,
   _FN
 };
@@ -46,7 +46,8 @@ enum planck_layers {
 #define CTLCLCK LCTL(KC_BTN1)
 #define QWERTY  DF(_QWERTY)
 #define F8_RSFT RSFT_T(KC_F8)
-#define RBR_RSF RSFT_T(KC_RBRC)
+#define GRV_LSF LSFT_T(KC_GRV)
+#define BSL_RSF RSFT_T(KC_BSLS)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -65,16 +66,16 @@ XXXXXXX  , XXXXXXX  , TAB_GUI  , SPC_FN   , ESC_ALT  , XXXXXXX  , XXXXXXX  , ENT
   ),
 
   [_FN] = LAYOUT_planck_grid(
-KC_BRID  , KC_BRIU  , MSSCTRL  , LNCHPAD  , KC_EJCT  , XXXXXXX  , XXXXXXX  , KC_MRWD  , KC_MPLY  , KC_MFFD  , KC_VOLD  , KC_VOLU  ,
-MENUBAR  , DOCK     , CTLCNTR  , NOTCNTR  , SPTLGHT  , XXXXXXX  , XXXXXXX  , DVORAK   , KC_F9    , KC_F10   , KC_F11   , KC_F12   ,
+KC_BRID  , KC_BRIU  , MSSCTRL  , SPTLGHT  , KC_EJCT  , XXXXXXX  , XXXXXXX  , KC_MRWD  , KC_MPLY  , KC_MFFD  , KC_VOLD  , KC_VOLU  ,
+KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  , KC_F20   , XXXXXXX  , XXXXXXX  , DVORAK   , KC_F9    , KC_F10   , KC_F11   , KC_F12   ,
 F1_LSFT  , KC_F2    , KC_F3    , KC_F4    , CTLCLCK  , XXXXXXX  , XXXXXXX  , QWERTY   , KC_F5    , KC_F6    , KC_F7    , F8_RSFT  ,
 XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
   [_NO] = LAYOUT_planck_grid(
 KC_1     , KC_2     , KC_3     , KC_4     , KC_5     , XXXXXXX  , XXXXXXX  , KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,
-KC_GRV   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_SLSH  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  ,
-SCL_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_BSLS  , KC_MINS  , KC_EQL   , KC_LBRC  , RBR_RSF  ,
+XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_MINS  , KC_EQL   , KC_LBRC  , KC_RBRC  ,
+GRV_LSF  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_SCLN  , KC_SLSH  , BSL_RSF  ,
 XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX  , _______  , _______  , _______  , XXXXXXX  , XXXXXXX
   ),
 
