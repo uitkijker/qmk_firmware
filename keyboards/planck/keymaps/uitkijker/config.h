@@ -16,7 +16,7 @@
 
 #pragma once
 #define USB_MAX_POWER_CONSUMPTION 100
-#define TAPPING_TERM 200
+#define TAPPING_TERM 300
 
 // PERMISSIVE HOLD
 // #define TAPPING_TERM 60000
